@@ -1,0 +1,21 @@
+﻿---
+- hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Install req soft
+    yum: name={{ item }} state=latest
+    with_items:
+    - wget
+    - htop
+    - rsync
+    - vim
+    - zip
+    - unzip
+    - atop
+    - tmux
+    - tcpdump
+    - whois
+    - bind-utils
+    - vnstat
+...
